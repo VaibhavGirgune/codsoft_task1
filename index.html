@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <!-- <img src="images/logo.png" class="logo"> -->
+                <h1 class="logo"><span class="ingredient">V</span>ibhav</h1>
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li> 
+                    <li><a href="#">Resume</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text" id="home">
+                <p>UI/UX Designer</p>
+                <h1>Hi I'm Vaibhav Girgune<br>from <span class=ingredient>Alard College</span></h1>
+            </div>
+        </div>
+    </div>
+    <!-- About Me -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="/images/new.jpg" height="500px">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p style="padding:20px 0px;">I'm Vaibhav Santosh Girgune <br>I'm pursuing my Bachelors of Engineering in computer engineering <br>at savitribai phule pune university pune!</p>
+
+                    <div class="tab-titles">
+                        <div class="tab-links active-link" onclick="opentab('skills')">Skills</div>
+                        <div class="tab-links" onclick="opentab('experience')">Experience</div>
+                        <div class="tab-links" onclick="opentab('projects')">projects</div>
+                        <div class="tab-links" onclick="opentab('education')">Education</div>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>Javascript</li>
+                            <li>Bootstrap</li>
+                            <li>Angular</li>
+                            <!-- <li>c++</li>
+                            <li>Java</li>
+                            <li>core Java</li>
+                            <li>Spring Core</li>
+                            <li>Spring JDBC</li>
+                            <li>Spring Boot</li>
+                            <li>OOP</li> -->
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <p>AS i fresher i do not have any experience </p>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span><i class="fa-solid fa-graduation-cap"></i></span><br><span>Std 1-10th</span><br>V M R rahuri</li>
+                            <li style="margin-top: 21px;"><span><i class="fa-solid fa-graduation-cap"></i></span><br><span>Std 11-12th</span><br>ASC college rahuri</li>
+                            <li style="margin-top: 21px;"><span><i class="fa-solid fa-graduation-cap"></i></span><br><span>BE in Computer Engineering</span><br>Alard College Of Engineering Pune</li>     
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Contact -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-sharp fa-solid fa-paper-plane"></i>vaibhavgirgune99@gmaile.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i>7058353049</p>
+
+                    
+                    <div class="social-icons">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter-square"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <div id="button">
+                        <a href="/Task2/vaibhav.pdf" download >Download CV</a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <div class="form-field">
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-field">
+                            <input type="email" name="Email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-field2">
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit" id="btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copy-right">
+            <p>&copy 2023 developed by Vaibhav Girgune</p>
+        </div>
+    </div>
+    <script>
+        var tablinks=document.getElementsByClassName('tab-links');
+        var tabcontents=document.getElementsByClassName('tab-contents');
+
+        function opentab(tabname)
+        {
+            for(tablink of tablinks){                      
+                tablink.classList.remove("active-link");     //remove contnt
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");    
+            }
+            event.currentTarget.classList.add("active-link");   // display the active color
+            document.getElementById(tabname).classList.add("active-tab");  //disply content
+        }
+        
+    </script>
+</body>
+</html>
